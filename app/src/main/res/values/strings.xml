@@ -13,6 +13,12 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="nombreRegistro">Nombre</string>
 
+    <string name="label_nombre">Nombre</string>
+    <string name="label_apellido">Apellido</string>
+    <string name="label_correo">Correo Electrónico</string>
+    <string name="btn_guardar">Guardar</string>
+
+
 
     <!-- Cadenas para la selección de malos hábitos -->
     <string name="selecciona_tus_malos_habitos">Selecciona Tus Malos Hábitos</string>

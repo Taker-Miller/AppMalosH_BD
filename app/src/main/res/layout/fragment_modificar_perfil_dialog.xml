@@ -4,25 +4,92 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Subtítulo Nombre -->
+    <TextView
+        android:id="@+id/label_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_nombre"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Campo de texto para Nombre -->
     <EditText
         android:id="@+id/edit_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:inputType="textPersonName" />
+        android:autofillHints=""
+        android:minHeight="48dp"
+        android:hint="@string/label_nombre"
+        android:inputType="textPersonName"
+        android:importantForAutofill="yes"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
 
+    <!-- Subtítulo Apellido -->
+    <TextView
+        android:id="@+id/label_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_apellido"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <!-- Campo de texto para Apellido -->
+    <EditText
+        android:id="@+id/edit_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:minHeight="48dp"
+        android:hint="@string/label_apellido"
+        android:inputType="textPersonName"
+        android:importantForAutofill="yes"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Subtítulo Correo Electrónico -->
+    <TextView
+        android:id="@+id/label_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_correo"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <!-- Campo de texto para Correo Electrónico -->
     <EditText
         android:id="@+id/edit_correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo Electrónico"
+        android:autofillHints=""
+        android:minHeight="48dp"
+        android:hint="@string/label_correo"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="8dp" />
+        android:importantForAutofill="yes"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
 
+    <!-- Botón Guardar -->
     <Button
         android:id="@+id/btn_guardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:layout_marginTop="16dp" />
+        android:text="@string/btn_guardar"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/white"
+        android:elevation="4dp"
+        android:padding="12dp"
+        android:fontFamily="@font/roboto_medium"
+        android:background="@drawable/button_rounded_modern" />
 </LinearLayout>

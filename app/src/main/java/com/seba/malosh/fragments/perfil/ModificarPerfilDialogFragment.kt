@@ -45,7 +45,6 @@ class ModificarPerfilDialogFragment : DialogFragment() {
         editApellido = view.findViewById(R.id.edit_apellido)
         editCorreo = view.findViewById(R.id.edit_correo)
 
-        // Establecer los valores actuales
         editNombre.setText(nombreActual)
         editApellido.setText(apellidoActual)
         editCorreo.setText(correoActual)
@@ -63,7 +62,6 @@ class ModificarPerfilDialogFragment : DialogFragment() {
                 val userId = currentUser.uid
                 val userRef = firestore.collection("usuarios").document(userId)
 
-                // Actualizar los datos del usuario en Firestore
                 val updatedUserData: MutableMap<String, Any> = hashMapOf(
                     "nombre" to nuevoNombre,
                     "apellido" to nuevoApellido,

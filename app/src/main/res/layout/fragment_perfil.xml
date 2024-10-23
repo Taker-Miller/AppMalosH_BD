@@ -8,63 +8,86 @@
     android:gravity="center"
     tools:context=".fragments.perfil.PerfilFragment">
 
-    <!-- Contenedor con sombra para la imagen de perfil -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/circle_background"
-        android:elevation="6dp"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/imagen_perfil"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ic_perfil"
-            android:contentDescription="Foto de perfil"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center"
-            android:background="@drawable/circle_background" />
-
-    </LinearLayout>
+    <!-- Imagen de perfil sin fondo circular -->
+    <ImageView
+        android:id="@+id/imagen_perfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_perfil"
+        android:contentDescription="Foto de perfil"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center" />
 
     <!-- Espaciado -->
     <Space
         android:layout_width="20dp"
         android:layout_height="20dp" />
 
-    <!-- Nombre del usuario con estilo modernizado -->
+    <!-- Subtítulo Nombre -->
+    <TextView
+        android:id="@+id/label_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="14sp"
+        android:textColor="@color/gray_light"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/roboto_medium" />
+
+    <!-- Nombre del usuario (se carga dinámicamente) -->
     <TextView
         android:id="@+id/nombre_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre del Usuario"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:fontFamily="@font/roboto_medium"
         android:layout_marginBottom="4dp"
         android:layout_gravity="center" />
 
-    <!-- Apellido del usuario con estilo actualizado -->
+    <!-- Subtítulo Apellido -->
+    <TextView
+        android:id="@+id/label_apellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        android:textSize="14sp"
+        android:textColor="@color/gray_light"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/roboto_medium" />
+
+    <!-- Apellido del usuario (se carga dinámicamente) -->
     <TextView
         android:id="@+id/apellido_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apellido del Usuario"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textColor="@color/white"
         android:fontFamily="@font/roboto_medium"
         android:layout_gravity="center"
         android:layout_marginBottom="8dp" />
 
-    <!-- Correo del usuario modernizado -->
+    <!-- Subtítulo Correo Electrónico -->
+    <TextView
+        android:id="@+id/label_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo Electrónico"
+        android:textSize="14sp"
+        android:textColor="@color/gray_light"
+        android:layout_gravity="center"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/roboto_medium" />
+
+    <!-- Correo del usuario (se carga dinámicamente) -->
     <TextView
         android:id="@+id/correo_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Correo del Usuario"
         android:textSize="16sp"
         android:textColor="@color/gray_light"
         android:layout_gravity="center"

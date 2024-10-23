@@ -8,13 +8,22 @@
     <!-- Permiso para programar alarmas exactas (necesario para Android 12 o superior) -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
+    <!-- Permiso para leer el almacenamiento externo -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Permiso para escribir en el almacenamiento externo (solo hasta Android 9) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icono_inicio"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icono_inicio"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MalosH">
+        android:theme="@style/Theme.MalosH"
+        android:requestLegacyExternalStorage="true">
 
         <!-- Actividad de bienvenida -->
         <activity
@@ -48,5 +57,4 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>
