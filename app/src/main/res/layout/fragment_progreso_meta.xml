@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/purple_dark">
+
+    <!-- Título para seleccionar el hábito -->
+    <TextView
+        android:id="@+id/periodoSeleccionadoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona el Hábito"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Spinner para seleccionar un solo hábito -->
+    <Spinner
+        android:id="@+id/habitoSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:padding="12dp"
+        android:background="@drawable/spinner_background" />
+
+    <!-- Nuevo TextView para mostrar las fechas de la meta del hábito seleccionado -->
+    <TextView
+        android:id="@+id/fechasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_medium" />
+
+    <!-- Calendario con fondo sólido -->
+    <CalendarView
+        android:id="@+id/calendarioMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:elevation="4dp" />
+
+    <!-- Estado del Día -->
+    <TextView
+        android:id="@+id/estadoDiaTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estado del Día"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:textColor="@color/text_color_secondary"
+        android:background="@drawable/textview_background"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:elevation="4dp" />
+
+</LinearLayout>

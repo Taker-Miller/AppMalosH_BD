@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/purple_dark">
+
+    <!-- Título Reflexiones Diarias -->
+    <TextView
+        android:id="@+id/reflexionesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reflexiones_diarias"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/backgroundWhite"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Campo de entrada para escribir la reflexión -->
+    <EditText
+        android:id="@+id/reflexionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/escribe_tu_reflexion"
+        android:minHeight="120dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edittext_rounded"
+        android:padding="12dp"
+        android:textColor="@color/textPrimary"
+        android:textSize="16sp"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botón para guardar la reflexión -->
+    <Button
+        android:id="@+id/guardarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar_reflexion"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/buttonPrimary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:elevation="6dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_rounded"/>
+
+    <!-- Texto para las reflexiones guardadas -->
+    <TextView
+        android:id="@+id/reflexionesGuardadasTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reflexiones_guardadas"
+        android:textStyle="bold"
+        android:textColor="@color/titleColor"
+        android:background="@color/accentBackground"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Lista de reflexiones guardadas -->
+    <ListView
+        android:id="@+id/listaReflexiones"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:background="@color/backgroundWhite"
+        android:elevation="4dp"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

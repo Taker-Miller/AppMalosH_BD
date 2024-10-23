@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores existentes -->
+    <color name="purple_light">#D1C4E9</color>
+    <color name="purple">#7E57C2</color>
+    <color name="purple_dark">#512DA8</color>
+    <color name="teal_light">#80CBC4</color>
+    <color name="teal_dark">#00796B</color>
+    <color name="red">#E53935</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="blue_accent">#448AFF</color>
+    <color name="gray">#808080</color>
+    <color name="blue">#0028FF</color>
+    <color name="verde">#4CAF50</color>
+    <color name="rojo">#F44336</color>
+    <color name="holo_blue_light">#33B5E5</color>
+    <color name="holo_orange_light">#FFA726</color>
+    <color name="verde_menta">#C8E6C9</color>
+    <color name="colorCheckbox">#FFBB86FC</color>
+    <color name="gray_light">#D3D3D3</color>
+
+    <!-- Nuevos colores añadidos del punto 3 -->
+    <color name="primary_color">#3F51B5</color>
+    <color name="secondary_color">#FF4081</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#757575</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Colores adicionales que ya tenías -->
+    <color name="backgroundLight">#FFFFFF</color>
+    <color name="text_dark">#000000</color>
+    <color name="button_background">#6200EE</color>
+    <color name="edittext_border">#BDBDBD</color>
+    <color name="text_hint">#757575</color>
+    <color name="card_background">#F5F5F5</color>
+    <color name="accent_color">#03DAC5</color>
+    <color name="accentBackground">#03A9F4</color>
+    <color name="backgroundWhite">#FFFFFF</color>
+    <color name="buttonPrimary">#6200EE</color>
+    <color name="titleColor">#37474F</color>
+    <color name="textPrimary">#212121</color>
+    <color name="dividerColor">#BDBDBD</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="text_color_primary">#212121</color>
+    <color name="text_color_secondary">#757575</color>
+    <color name="secondary_background_color">#E0E0E0</color>
+</resources>

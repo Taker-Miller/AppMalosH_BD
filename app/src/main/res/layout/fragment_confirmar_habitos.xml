@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/purple_dark">
+
+    <!-- Título de confirmación -->
+    <TextView
+        android:id="@+id/labelTituloConfirmacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estos Has Seleccionado"
+        android:textSize="22sp"
+        android:textColor="@color/teal_light"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"/>
+
+    <!-- Bloque para los hábitos seleccionados con fondo de color -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:padding="16dp"
+        android:backgroundTint="@color/verde_menta"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="24dp">
+
+        <TextView
+            android:id="@+id/selectedHabitsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Pregunta de confirmación -->
+    <TextView
+        android:id="@+id/labelConfirmacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Estás Seguro que son tus malos hábitos?"
+        android:textSize="18sp"
+        android:textColor="@color/teal_light"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Botones de acción (No, Volver | Sí) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/noButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No, Volver"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/red"
+            android:padding="12dp"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/siButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sí"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/teal_dark"
+            android:padding="12dp" />
+    </LinearLayout>
+
+</LinearLayout>

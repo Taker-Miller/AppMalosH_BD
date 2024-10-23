@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="@color/purple_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:padding="16dp">
+
+        <!-- Título del plan -->
+        <TextView
+            android:id="@+id/labelTituloPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plan de Seguimiento"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Texto para mostrar el primer hábito -->
+        <TextView
+            android:id="@+id/habito1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurando: Hábito 1"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CardView para contener las opciones de fechas del primer hábito -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="24dp"
+            android:padding="24dp"
+            android:backgroundTint="@color/purple_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Botón para seleccionar fecha de inicio del hábito 1 -->
+                <Button
+                    android:id="@+id/fechaInicio1Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar Fecha de Inicio Hábito 1"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/teal_dark"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:elevation="4dp" />
+
+                <!-- Texto para mostrar la fecha de inicio del hábito 1 -->
+                <TextView
+                    android:id="@+id/fechaInicio1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Inicio no seleccionada"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Botón para seleccionar fecha de fin del hábito 1 -->
+                <Button
+                    android:id="@+id/fechaFin1Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar Fecha de Fin Hábito 1"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/teal_dark"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:elevation="4dp" />
+
+                <!-- Texto para mostrar la fecha de fin del hábito 1 -->
+                <TextView
+                    android:id="@+id/fechaFin1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Fin no seleccionada"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Texto para mostrar el segundo hábito -->
+        <TextView
+            android:id="@+id/habito2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurando: Hábito 2"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CardView para contener las opciones de fechas del segundo hábito -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="24dp"
+            android:padding="24dp"
+            android:backgroundTint="@color/purple_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Botón para seleccionar fecha de inicio del hábito 2 -->
+                <Button
+                    android:id="@+id/fechaInicio2Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar Fecha de Inicio Hábito 2"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/teal_dark"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:elevation="4dp" />
+
+                <!-- Texto para mostrar la fecha de inicio del hábito 2 -->
+                <TextView
+                    android:id="@+id/fechaInicio2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Inicio no seleccionada"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Botón para seleccionar fecha de fin del hábito 2 -->
+                <Button
+                    android:id="@+id/fechaFin2Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar Fecha de Fin Hábito 2"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/teal_dark"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:elevation="4dp" />
+
+                <!-- Texto para mostrar la fecha de fin del hábito 2 -->
+                <TextView
+                    android:id="@+id/fechaFin2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha de Fin no seleccionada"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botones para definir el plan y volver -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/definirButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Definir Plan"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_dark"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="4dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/volverButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Volver"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/red"
+                android:padding="12dp"
+                android:elevation="4dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

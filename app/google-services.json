@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "476442298840",
+    "project_id": "fir-malosh",
+    "storage_bucket": "fir-malosh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476442298840:android:07e7fcbbe36c9305e1caad",
+        "android_client_info": {
+          "package_name": "com.seba.malosh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1S2f4-Md4HdTvrnFyDp8bFWVKp4pNz8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

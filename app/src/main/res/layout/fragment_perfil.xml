@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/purple_dark"
+    android:gravity="center"
+    tools:context=".fragments.perfil.PerfilFragment">
+
+    <!-- Contenedor con sombra para la imagen de perfil -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_background"
+        android:elevation="6dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imagen_perfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_perfil"
+            android:contentDescription="Foto de perfil"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background" />
+
+    </LinearLayout>
+
+    <!-- Espaciado -->
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <!-- Nombre del usuario con estilo modernizado -->
+    <TextView
+        android:id="@+id/nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Usuario"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center" />
+
+    <!-- Apellido del usuario con estilo actualizado -->
+    <TextView
+        android:id="@+id/apellido_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apellido del Usuario"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Correo del usuario modernizado -->
+    <TextView
+        android:id="@+id/correo_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo del Usuario"
+        android:textSize="16sp"
+        android:textColor="@color/gray_light"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_medium" />
+
+    <!-- Botón para cambiar imagen de perfil -->
+    <Button
+        android:id="@+id/btn_editar_imagen_perfil"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Imagen"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:elevation="6dp"
+        android:background="@drawable/button_rounded_modern" />
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="16dp" />
+
+    <!-- Botón para editar perfil -->
+    <Button
+        android:id="@+id/btn_editar_perfil"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Editar Perfil"
+        android:backgroundTint="@color/secondary_color"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:elevation="6dp"
+        android:background="@drawable/button_rounded_modern" />
+
+</LinearLayout>
