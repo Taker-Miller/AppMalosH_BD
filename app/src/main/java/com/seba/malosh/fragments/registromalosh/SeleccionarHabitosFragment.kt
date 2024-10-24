@@ -15,8 +15,8 @@ class SeleccionarHabitosFragment : Fragment() {
 
     private lateinit var siguienteButton: Button
     private lateinit var checkboxes: List<CheckBox>
-    private var registeredHabits = ArrayList<String>()
-    private var maxHabitosPermitidos = 2
+    private var registeredHabits = ArrayList<String>() // Hábitos ya registrados
+    private var maxHabitosPermitidos = 2 // Máximo permitido de hábitos adicionales
 
     companion object {
         private const val REGISTERED_HABITS_KEY = "registered_habits"
@@ -24,6 +24,7 @@ class SeleccionarHabitosFragment : Fragment() {
         private const val MIN_HABITS = 2
         private const val MAX_HABITOS_PERMITIDOS_KEY = "max_habitos_permitidos"
 
+        // Método estático para crear una nueva instancia del fragmento, con los hábitos registrados pasados como argumento
         fun newInstance(registeredHabits: ArrayList<String>, maxHabitosPermitidos: Int): SeleccionarHabitosFragment {
             val fragment = SeleccionarHabitosFragment()
             val bundle = Bundle()
@@ -55,6 +56,7 @@ class SeleccionarHabitosFragment : Fragment() {
             view.findViewById(R.id.checkbox_poco_ejercicio)
         )
 
+
         registeredHabits = arguments?.getStringArrayList(REGISTERED_HABITS_KEY) ?: ArrayList()
         maxHabitosPermitidos = arguments?.getInt(MAX_HABITOS_PERMITIDOS_KEY, 2) ?: 2
 
@@ -67,23 +69,29 @@ class SeleccionarHabitosFragment : Fragment() {
         siguienteButton.setOnClickListener {
             val selectedHabits = checkboxes.filter { it.isChecked }.map { it.text.toString() }
 
-            if (registeredHabits.size >= MAX_HABITS) {
-                Toast.makeText(context, "Ya has registrado el máximo de hábitos permitidos.", Toast.LENGTH_SHORT).show()
-                siguienteButton.isEnabled = false
-            } else if (selectedHabits.size + registeredHabits.size < MIN_HABITS) {
-                Toast.makeText(context, "Selecciona al menos 2 hábitos", Toast.LENGTH_SHORT).show()
-            } else if (selectedHabits.size + registeredHabits.size > MAX_HABITS) {
-                Toast.makeText(context, "No puedes registrar más de 4 hábitos.", Toast.LENGTH_SHORT).show()
-            } else if (selectedHabits.size > maxHabitosPermitidos) {
-                Toast.makeText(context, "Solo puedes registrar $maxHabitosPermitidos hábitos más.", Toast.LENGTH_SHORT).show()
-            } else {
-                val fechaInicio = Calendar.getInstance()
+            when {
+                registeredHabits.size >= MAX_HABITS -> {
+                    Toast.makeText(context, "Ya has registrado el máximo de hábitos permitidos.", Toast.LENGTH_SHORT).show()
+                    siguienteButton.isEnabled = false
+                }
+                selectedHabits.size + registeredHabits.size < MIN_HABITS -> {
+                    Toast.makeText(context, "Selecciona al menos 2 hábitos", Toast.LENGTH_SHORT).show()
+                }
+                selectedHabits.size + registeredHabits.size > MAX_HABITS -> {
+                    Toast.makeText(context, "No puedes registrar más de 4 hábitos.", Toast.LENGTH_SHORT).show()
+                }
+                selectedHabits.size > maxHabitosPermitidos -> {
+                    Toast.makeText(context, "Solo puedes registrar $maxHabitosPermitidos hábitos más.", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    val fechaInicio = Calendar.getInstance()
 
-                val confirmarFragment = ConfirmarHabitosFragment.newInstance(ArrayList(selectedHabits), fechaInicio)
-                fragmentManager?.beginTransaction()
-                    ?.replace(R.id.fragment_container, confirmarFragment)
-                    ?.addToBackStack(null)
-                    ?.commit()
+                    val confirmarFragment = ConfirmarHabitosFragment.newInstance(ArrayList(selectedHabits), fechaInicio)
+                    fragmentManager?.beginTransaction()
+                        ?.replace(R.id.fragment_container, confirmarFragment)
+                        ?.addToBackStack(null)
+                        ?.commit()
+                }
             }
         }
 

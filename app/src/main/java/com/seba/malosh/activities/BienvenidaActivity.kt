@@ -18,6 +18,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.seba.malosh.fragments.desafios.DesafiosDiariosFragment
 import com.seba.malosh.fragments.metas.MetasFragment
 import com.seba.malosh.fragments.progresos.metas.ProgresoFragment
@@ -38,6 +40,9 @@ class BienvenidaActivity : AppCompatActivity() {
     private lateinit var titleTextView: TextView
     private lateinit var descriptionTextView: TextView
     private lateinit var notificationAdviceTextView: TextView
+
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
+    private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
     private val scheduleExactAlarmLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (isExactAlarmPermissionGranted()) {
@@ -60,13 +65,13 @@ class BienvenidaActivity : AppCompatActivity() {
         descriptionTextView = findViewById(R.id.descriptionTextView)
         notificationAdviceTextView = findViewById(R.id.notificationAdviceTextView)
 
-        // Listener para recibir los resultados del ModificarPerfilDialogFragment
+        cargarHabitosDesdeFirestore() // Cargar hábitos registrados desde Firestore al iniciar sesión
+
         supportFragmentManager.setFragmentResultListener("modificarPerfilRequestKey", this) { _, bundle ->
             val nombre = bundle.getString("nombre_modificado")
             val apellido = bundle.getString("apellido_modificado")
             val correo = bundle.getString("correo_modificado")
 
-            // Actualizar la UI con los datos recibidos
             titleTextView.text = getString(R.string.mensaje_bienvenida, nombre, apellido)
             descriptionTextView.text = getString(R.string.mensaje_correo, correo)
             Toast.makeText(this, "Perfil actualizado: $nombre $apellido, $correo", Toast.LENGTH_SHORT).show()
@@ -82,6 +87,32 @@ class BienvenidaActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    private fun cargarHabitosDesdeFirestore() {
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            val userId = currentUser.uid
+            firestore.collection("usuarios")
+                .document(userId)
+                .collection("habitos_registrados")
+                .get()
+                .addOnSuccessListener { documents ->
+                    val habitosRegistrados = mutableListOf<String>()
+                    for (document in documents) {
+                        val habitos = document.get("habitos") as? List<String>
+                        if (habitos != null) {
+                            habitosRegistrados.addAll(habitos)
+                        }
+                    }
+                    registeredHabits.clear()
+                    registeredHabits.addAll(habitosRegistrados)
+                    Toast.makeText(this, "Hábitos cargados: $registeredHabits", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Error al cargar hábitos: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

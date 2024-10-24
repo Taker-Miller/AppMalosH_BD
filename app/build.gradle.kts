@@ -58,8 +58,10 @@ android {
 
 dependencies {
     implementation(platform(libs.firebase.bom))
-
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.firestore.ktx) // Firestore dependency
+    implementation(libs.firebase.storage.ktx)
 
     // ViewModel for Fragments and Jetpack Compose
     implementation(libs.androidx.lifecycle.viewmodel.ktx.v260)
@@ -84,9 +86,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.gridlayout)
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.firestore.ktx)
-    implementation(libs.firebase.storage.ktx)
 
     // Glide dependency for image loading
     implementation(libs.glide)
@@ -100,3 +99,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
+
+
